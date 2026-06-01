@@ -1,0 +1,38 @@
+### Sucesso - média
+POST http://127.0.0.1:8001/estatisticas/media
+Content-Type: application/json
+
+{
+  "valores": [1,2,3]
+}
+
+###
+
+### Sucesso - resumo
+POST http://127.0.0.1:8001/estatisticas/resumo?decimais=3
+Content-Type: application/json
+
+{
+  "valores": [1,2,3,4]
+}
+
+###
+
+### Erro - lista vazia
+POST http://127.0.0.1:8001/estatisticas/media
+Content-Type: application/json
+
+{
+  "valores": []
+}
+
+###
+
+### Erro - vetores diferentes
+POST http://127.0.0.1:8001/vetores/distancia
+Content-Type: application/json
+
+{
+  "vetor_a": [1,2],
+  "vetor_b": [1]
+}
